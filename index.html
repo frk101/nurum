@@ -127,6 +127,7 @@
         letter-spacing: 0.6px;
         box-shadow: 0 14px 35px rgba(255, 107, 154, 0.25);
         transition: transform 0.15s var(--ease);
+        touch-action: manipulation;
       }
       .tapBtn:active {
         transform: translateY(1px) scale(0.99);
@@ -212,7 +213,7 @@
         line-height: 1.55;
       }
 
-      /* COUNTER CARD (KALSIN) */
+      /* COUNTER CARD */
       .counterCard {
         margin: 18px auto 0;
         width: min(560px, 100%);
@@ -271,6 +272,7 @@
         justify-content: center;
         cursor: pointer;
         transition: transform 0.2s var(--ease);
+        touch-action: manipulation;
       }
       .gemBtn:hover {
         transform: translateY(-2px);
@@ -356,6 +358,7 @@
         box-shadow: 0 18px 45px rgba(255, 175, 190, 0.2);
         position: relative;
         overflow: hidden;
+        touch-action: manipulation;
       }
       #target {
         position: absolute;
@@ -366,6 +369,7 @@
         transition: transform 0.12s var(--ease);
         will-change: left, top, transform;
         filter: drop-shadow(0 10px 18px rgba(255, 107, 154, 0.25));
+        touch-action: manipulation;
       }
       #target:active {
         transform: translate(-50%, -50%) scale(0.96);
@@ -451,14 +455,6 @@
         font-size: 0.78rem;
         color: rgba(255, 255, 255, 0.92);
       }
-      .chip button {
-        background: transparent;
-        border: none;
-        color: rgba(255, 255, 255, 0.95);
-        font-weight: 900;
-        cursor: pointer;
-        letter-spacing: 0.4px;
-      }
 
       /* MODALS */
       .modalBack {
@@ -513,6 +509,7 @@
         font-weight: 900;
         cursor: pointer;
         transition: transform 0.15s var(--ease);
+        touch-action: manipulation;
       }
       .btn:active {
         transform: scale(0.99);
@@ -682,7 +679,7 @@
           <span style="opacity: 0.75">aynı kalpte büyüyen bir hikâye.</span>
         </div>
 
-        <!-- COUNTER (KALSIN) -->
+        <!-- COUNTER -->
         <div class="counterCard">
           <div class="counterTitle">BİZ OLALI</div>
           <div class="counterGrid">
@@ -739,11 +736,8 @@
     <!-- 3) STORY -->
     <section id="story-screen" class="screen">
       <div class="full-screen-wrap">
-        <!-- SAYAÇ YOK -->
         <div class="storyTop">
-          <div class="chip">
-            <!-- boş -->
-          </div>
+          <div class="chip"></div>
         </div>
 
         <img id="s-img" src="" alt="Anılar" />
@@ -800,27 +794,27 @@ Uzak olsak da kalbim hep yanında.
       `.trim();
 
       const storyData = [
-        { img: "resim1.jpeg", text: "Bakışlarında bulduğum huzur..." },
-        { img: "resim2.jpeg", text: "Gülüşün, en parlak yıldızım." },
-        { img: "resim3.jpeg", text: "Ellerini hiç bırakmayacağım." },
-        { img: "resim4.jpeg", text: "Her dakikamız bir ömre bedel." },
-        { img: "resim5.jpeg", text: "Senin yanın en sevdiğim manzara." },
-        { img: "resim6.jpeg", text: "Kalbinin ritmi en güzel melodi." },
-        { img: "resim7.jpeg", text: "En güzel tamamımsın..." }, // 7. fotoğrafta sürpriz OTOMATİK
-        { img: "resim8.jpeg", text: "Ömrümün en tatlı uykusu." },
-        { img: "resim9.jpeg", text: "Tek yol arkadaşım..." },
-        { img: "resim10.jpeg", text: "Adın şiire dönüşüyor bende." },
-        { img: "resim11.jpeg", text: "Evim sensin..." },
-        { img: "resim12.jpeg", text: "Bulutun olmaya hazırım." },
-        { img: "resim13.jpeg", text: "Aynı rüyayı uyanık görmek..." },
-        { img: "resim15.jpeg", text: "Hep bu anda kalsak..." },
-        { img: "resim16.jpeg", text: "Hayat seninle renkli." },
-        { img: "resim17.jpeg", text: "Kendimi evimde hissediyorum." },
-        { img: "resim18.jpeg", text: "Hayatımdaki en güzel rüyamsın" },
-        { img: "resim19.jpeg", text: "Seninle susmak bile güzel." },
-        { img: "resim20.jpeg", text: "Her gün seninle bayram." },
-        { img: "resim21.jpeg", text: "Kalbimin mülkü senin." },
-        { img: "resim22.jpeg", text: "Nefes almak kadar mucizevi." },
+        { img: "resim1.webp", text: "Bakışlarında bulduğum huzur..." },
+        { img: "resim2.webp", text: "Gülüşün, en parlak yıldızım." },
+        { img: "resim3.webp", text: "Ellerini hiç bırakmayacağım." },
+        { img: "resim4.webp", text: "Her dakikamız bir ömre bedel." },
+        { img: "resim5.webp", text: "Senin yanın en sevdiğim manzara." },
+        { img: "resim6.webp", text: "Kalbinin ritmi en güzel melodi." },
+        { img: "resim7.webp", text: "En güzel tamamımsın..." }, // 7. fotoğrafta sürpriz
+        { img: "resim8.webp", text: "Ömrümün en tatlı uykusu." },
+        { img: "resim9.webp", text: "Tek yol arkadaşım..." },
+        { img: "resim10.webp", text: "Adın şiire dönüşüyor bende." },
+        { img: "resim11.webp", text: "Evim sensin..." },
+        { img: "resim12.webp", text: "Bulutun olmaya hazırım." },
+        { img: "resim13.webp", text: "Aynı rüyayı uyanık görmek..." },
+        { img: "resim15.webp", text: "Hep bu anda kalsak..." },
+        { img: "resim16.webp", text: "Hayat seninle renkli." },
+        { img: "resim17.webp", text: "Kendimi evimde hissediyorum." },
+        { img: "resim18.webp", text: "Hayatımdaki en güzel rüyamsın" },
+        { img: "resim19.webp", text: "Seninle susmak bile güzel." },
+        { img: "resim20.webp", text: "Her gün seninle bayram." },
+        { img: "resim21.webp", text: "Kalbimin mülkü senin." },
+        { img: "resim22.webp", text: "Nefes almak kadar mucizevi." },
       ];
 
       // ================== ELEMENTS ==================
@@ -853,7 +847,6 @@ Uzak olsak da kalbim hep yanında.
       const flowerBtn = document.getElementById("flowerBtn");
       const voiceBtn = document.getElementById("voiceBtn");
 
-      // Counter elements
       const cDays = document.getElementById("cDays");
       const cHours = document.getElementById("cHours");
       const cMins = document.getElementById("cMins");
@@ -867,15 +860,13 @@ Uzak olsak da kalbim hep yanında.
       const maxScore = 6;
 
       let sIdx = 0;
-
-      // story timing control
       let storyInterval = null;
       let storyTimeout = null;
       let storyPaused = false;
 
-      // ================== AUDIO DUCKING (SES NET OLSUN) ==================
+      // ================== AUDIO DUCKING ==================
       const MUSIC_NORMAL = 0.95;
-      const MUSIC_DUCKED = 0.18; // ses çalarken
+      const MUSIC_DUCKED = 0.18;
       const DUCK_FADE_MS = 420;
 
       function fadeVolume(audioEl, to, ms = 400) {
@@ -904,16 +895,11 @@ Uzak olsak da kalbim hep yanında.
       }
 
       function safePlayVoice() {
-        // Ses başlayınca müziği kıs
         duckMusic();
-
         myVoice.currentTime = 0;
         const p = myVoice.play();
         if (p && typeof p.catch === "function") p.catch(() => {});
-
-        myVoice.onended = () => {
-          unduckMusic();
-        };
+        myVoice.onended = () => unduckMusic();
       }
 
       // ================== HELPERS ==================
@@ -969,8 +955,9 @@ Uzak olsak da kalbim hep yanında.
         target.style.top = y + "px";
       }
 
+      // ✅ Confetti: pointer-events none (tıklama yemesin)
       function popMiniConfettiAt(x, y) {
-        const count = 16;
+        const count = 12;
         for (let i = 0; i < count; i++) {
           const d = document.createElement("div");
           d.style.position = "fixed";
@@ -981,10 +968,11 @@ Uzak olsak da kalbim hep yanında.
           d.style.borderRadius = "3px";
           d.style.background = `hsl(${Math.floor(randBetween(0, 360))} 85% 70%)`;
           d.style.zIndex = 9999;
+          d.style.pointerEvents = "none";
           document.body.appendChild(d);
 
-          const dx = randBetween(-170, 170);
-          const dy = randBetween(-240, -90);
+          const dx = randBetween(-160, 160);
+          const dy = randBetween(-220, -80);
           const rot = randBetween(-360, 360);
 
           const anim = d.animate(
@@ -995,14 +983,14 @@ Uzak olsak da kalbim hep yanında.
                 opacity: 0,
               },
             ],
-            { duration: 760, easing: "cubic-bezier(0.2, 0.8, 0.2, 1)" },
+            { duration: 720, easing: "cubic-bezier(0.2, 0.8, 0.2, 1)" },
           );
           anim.onfinish = () => d.remove();
         }
       }
 
       function popConfettiRain() {
-        const count = 20;
+        const count = 12;
         for (let i = 0; i < count; i++) {
           const d = document.createElement("div");
           d.style.position = "fixed";
@@ -1013,10 +1001,11 @@ Uzak olsak da kalbim hep yanında.
           d.style.borderRadius = "3px";
           d.style.background = `hsl(${Math.floor(randBetween(0, 360))} 85% 70%)`;
           d.style.zIndex = 9999;
+          d.style.pointerEvents = "none";
           document.body.appendChild(d);
 
           const dy = window.innerHeight + 60;
-          const dx = randBetween(-140, 140);
+          const dx = randBetween(-120, 120);
           const rot = randBetween(-540, 540);
 
           const anim = d.animate(
@@ -1027,7 +1016,7 @@ Uzak olsak da kalbim hep yanında.
                 opacity: 0.12,
               },
             ],
-            { duration: randBetween(1250, 1950), easing: "linear" },
+            { duration: randBetween(1150, 1750), easing: "linear" },
           );
           anim.onfinish = () => d.remove();
         }
@@ -1037,6 +1026,12 @@ Uzak olsak da kalbim hep yanında.
       function initExperience() {
         if (started) return;
         started = true;
+
+        // ✅ iOS/Android için önce load
+        try {
+          music.load();
+          myVoice.load();
+        } catch {}
 
         safePlayMusic();
         tapLayer.classList.add("hidden");
@@ -1049,7 +1044,7 @@ Uzak olsak da kalbim hep yanında.
         setTimeout(() => moveHeart(), 250);
       }
 
-      function catchHeart() {
+      function catchHeart(e) {
         score++;
         setMeter();
 
@@ -1079,7 +1074,7 @@ Uzak olsak da kalbim hep yanında.
         }
       }
 
-      // ================== STORY (pause/resume) ==================
+      // ================== STORY (preload: now + next) ==================
       function clearStoryTimers() {
         if (storyInterval) clearInterval(storyInterval);
         if (storyTimeout) clearTimeout(storyTimeout);
@@ -1087,10 +1082,20 @@ Uzak olsak da kalbim hep yanında.
         storyTimeout = null;
       }
 
+      function preloadStoryAround(idx) {
+        [idx, idx + 1].forEach((k) => {
+          if (k >= 0 && k < storyData.length) {
+            const im = new Image();
+            im.src = storyData[k].img;
+          }
+        });
+      }
+
       function setStoryTextAndImage(index) {
         const item = storyData[index];
         sImg.src = item.img;
         sText.textContent = item.text;
+        preloadStoryAround(index);
       }
 
       function storyTransitionTo(index) {
@@ -1137,7 +1142,7 @@ Uzak olsak da kalbim hep yanında.
         }, 6800);
       }
 
-      // SECRET: 7. fotoğrafta otomatik aç, 10sn sonra kapat
+      // SECRET auto open/close
       let secretAutoCloseTimer = null;
       function openSecretAuto() {
         pauseStory();
@@ -1156,14 +1161,8 @@ Uzak olsak da kalbim hep yanında.
       }
 
       function runStory() {
-        storyData.forEach((item) => {
-          const i = new Image();
-          i.src = item.img;
-        });
-
         clearStoryTimers();
         storyPaused = false;
-
         sIdx = 0;
 
         setStoryTextAndImage(sIdx);
@@ -1199,7 +1198,9 @@ Uzak olsak da kalbim hep yanında.
         clearStoryTimers();
         finalText.textContent = FINAL_MESSAGE;
         changeScreen("final-screen");
-        for (let i = 0; i < 26; i++) setTimeout(popConfettiRain, i * 140);
+
+        // ✅ daha az konfeti (daha akıcı)
+        for (let i = 0; i < 10; i++) setTimeout(popConfettiRain, i * 170);
       }
 
       function resetAll() {
@@ -1221,7 +1222,7 @@ Uzak olsak da kalbim hep yanında.
         changeScreen("entry-screen");
       }
 
-      // ================== FLOWERS (final) ==================
+      // ================== FLOWERS ==================
       function spawnPetal() {
         const p = document.createElement("div");
         p.className = "petal";
@@ -1248,13 +1249,12 @@ Uzak olsak da kalbim hep yanında.
       }
 
       function flowerShower() {
-        for (let i = 0; i < 36; i++) setTimeout(spawnPetal, i * 90);
-        for (let i = 0; i < 20; i++) setTimeout(popConfettiRain, i * 140);
+        for (let i = 0; i < 28; i++) setTimeout(spawnPetal, i * 95);
+        for (let i = 0; i < 7; i++) setTimeout(popConfettiRain, i * 190);
       }
 
       // ================== COUNTER ==================
       function updateCounter() {
-        // güvenlik
         if (!cDays || !cHours || !cMins || !cSecs) return;
 
         const now = new Date();
@@ -1293,24 +1293,23 @@ Uzak olsak da kalbim hep yanında.
         starLayer.style.transform = `translate(${x}px, ${y}px)`;
       });
 
-      // ================== EVENTS ==================
-      startBtn.addEventListener("click", (e) => {
-        e.stopPropagation();
-        initExperience();
-      });
+      // ================== EVENTS (pointerdown) ==================
+      function onPD(el, fn) {
+        el.addEventListener("pointerdown", (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          fn(e);
+        });
+      }
 
-      goGameBtn.addEventListener("click", (e) => {
-        e.stopPropagation();
+      onPD(startBtn, () => initExperience());
+      onPD(goGameBtn, () => {
         initExperience();
         goToGame();
       });
+      onPD(target, (e) => catchHeart(e));
 
-      target.addEventListener("click", (e) => {
-        e.stopPropagation();
-        catchHeart();
-      });
-
-      gameArea.addEventListener("click", () => {
+      gameArea.addEventListener("pointerdown", (e) => {
         if (
           document
             .getElementById("game-screen")
@@ -1320,37 +1319,21 @@ Uzak olsak da kalbim hep yanında.
         }
       });
 
-      flowerBtn.addEventListener("click", (e) => {
-        e.stopPropagation();
-        flowerShower();
-      });
+      onPD(flowerBtn, () => flowerShower());
+      onPD(voiceBtn, () => safePlayVoice());
 
-      voiceBtn.addEventListener("click", (e) => {
-        e.stopPropagation();
-        safePlayVoice();
-      });
-
-      replayBtn.addEventListener("click", (e) => {
-        e.stopPropagation();
-        confirmModal.classList.add("show");
-      });
-
-      confirmYes.addEventListener("click", (e) => {
-        e.stopPropagation();
+      onPD(replayBtn, () => confirmModal.classList.add("show"));
+      onPD(confirmYes, () => {
         confirmModal.classList.remove("show");
         resetAll();
       });
+      onPD(confirmNo, () => confirmModal.classList.remove("show"));
 
-      confirmNo.addEventListener("click", (e) => {
-        e.stopPropagation();
-        confirmModal.classList.remove("show");
-      });
-
-      confirmModal.addEventListener("click", (e) => {
+      confirmModal.addEventListener("pointerdown", (e) => {
         if (e.target === confirmModal) confirmModal.classList.remove("show");
       });
 
-      secretModal.addEventListener("click", (e) => {
+      secretModal.addEventListener("pointerdown", (e) => {
         if (e.target === secretModal) closeSecretAuto();
       });
 
@@ -1362,6 +1345,11 @@ Uzak olsak da kalbim hep yanında.
       window.addEventListener("focus", () => {
         if (started && !heartInterval)
           heartInterval = setInterval(spawnHeart, 650);
+      });
+
+      // ✅ sekmeden dönünce müzik geri gelsin
+      document.addEventListener("visibilitychange", () => {
+        if (!document.hidden && started) safePlayMusic();
       });
 
       // ================== INIT ==================
